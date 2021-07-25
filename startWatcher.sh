@@ -1,5 +1,5 @@
 #!/bin/bash
-BUCKETBASE=s3://dc-spekops/DVR/
+BUCKETBASE=s3://dc-spekops/DVR
 
 if [ $# -eq 0 ]; then
 	echo "No arguments supplied. Expecting run data directory."
