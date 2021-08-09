@@ -22,5 +22,6 @@ while true; do
 	youtube-dl --external-downloader-args '-loglevel error -stats'  $URL
 	CHANNEL=${PWD##*/}
 	find . -type f -iname '*.mp4' -print0 | xargs -0 -P3 -I{} aws s3 mv {} $BUCKETBASE/$CHANNEL/ 
+	find . -type f -iname '*.mkv' -print0 | xargs -0 -P3 -I{} aws s3 mv {} $BUCKETBASE/$CHANNEL/ 
 	sleep 40;
 done;
